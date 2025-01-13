@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.liverpool.api.service.OrderServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-01-13T20:37:14" hostname="PabloMacDev.local" time="0.07">
+  <properties/>
+  <testcase name="getOrderById_Success()" classname="com.liverpool.api.service.OrderServiceTest" time="0.058"/>
+  <testcase name="createOrder_InvalidPaymentMethod()" classname="com.liverpool.api.service.OrderServiceTest" time="0.002"/>
+  <testcase name="getOrderById_NotFound()" classname="com.liverpool.api.service.OrderServiceTest" time="0.001"/>
+  <testcase name="addItemToOrder_OrderNotInProcess()" classname="com.liverpool.api.service.OrderServiceTest" time="0.001"/>
+  <testcase name="createOrder_Success()" classname="com.liverpool.api.service.OrderServiceTest" time="0.004"/>
+  <testcase name="addItemToOrder_Success()" classname="com.liverpool.api.service.OrderServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

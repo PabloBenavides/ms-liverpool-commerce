@@ -1,0 +1,603 @@
+openapi: 3.0.0
+info:
+  title: Liverpool Commerce API
+  description: API para gestionar clientes, órdenes y productos en Liverpool Commerce.
+  version: 1.0.0
+servers:
+  - url: http://localhost:7001
+paths:
+  /clients:
+    post:
+      summary: Crear un cliente
+      description: Crea un nuevo cliente en el sistema.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Client'
+            example:
+              firstName: Juan
+              middleName: Carlos
+              paternalLastName: Pérez
+              maternalLastName: Gómez
+              email: juan.perez@gmail.com
+              addresses:
+                - addressName: Casa
+                  street: Avenida Siempre Viva
+                  exteriorNumber: 123
+                  interiorNumber: 4B
+                  neighborhood: Centro
+                  city: Ciudad de México
+                  state: CDMX
+                  postalCode: 01000
+                  country: México
+      responses:
+        '200':
+          description: Cliente creado exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Client'
+    get:
+      summary: Obtener todos los clientes
+      description: Devuelve una lista de todos los clientes registrados.
+      responses:
+        '200':
+          description: Lista de clientes.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Client'
+  /clients/{id}:
+    get:
+      summary: Obtener cliente por ID
+      description: Devuelve los detalles de un cliente específico por su ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del cliente.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Detalles del cliente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Client'
+    delete:
+      summary: Eliminar cliente
+      description: Elimina un cliente específico por su ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del cliente.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Cliente eliminado exitosamente.
+          content:
+            application/json:
+              schema:
+                type: boolean
+  /clients/{clientId}/address:
+    patch:
+      summary: Agregar dirección al cliente
+      description: Agrega una nueva dirección a un cliente.
+      parameters:
+        - name: clientId
+          in: path
+          required: true
+          description: ID del cliente.
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Address'
+            example:
+              addressName: Oficina
+              street: Calle Falsa
+              exteriorNumber: 742
+              interiorNumber: 3A
+              neighborhood: Roma
+              city: Ciudad de México
+              state: CDMX
+              postalCode: 06700
+              country: México
+      responses:
+        '200':
+          description: Dirección agregada exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Client'
+  /clients/{clientId}/address/{addressName}:
+    patch:
+      summary: Actualizar dirección del cliente
+      description: Actualiza una dirección específica de un cliente.
+      parameters:
+        - name: clientId
+          in: path
+          required: true
+          description: ID del cliente.
+          schema:
+            type: string
+        - name: addressName
+          in: path
+          required: true
+          description: Nombre de la dirección a actualizar.
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Address'
+            example:
+              addressName: Casa
+              street: Avenida Siempre Viva
+              exteriorNumber: 456
+              interiorNumber: 2B
+              neighborhood: Centro
+              city: Monterrey
+              state: NL
+              postalCode: 64000
+              country: México
+      responses:
+        '200':
+          description: Dirección actualizada exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Client'
+    delete:
+      summary: Eliminar dirección del cliente
+      description: Elimina una dirección específica de un cliente.
+      parameters:
+        - name: clientId
+          in: path
+          required: true
+          description: ID del cliente.
+          schema:
+            type: string
+        - name: addressName
+          in: path
+          required: true
+          description: Nombre de la dirección a eliminar.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Dirección eliminada exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Client'
+  /orders:
+    post:
+      summary: Crear una orden
+      description: Crea una nueva orden en el sistema.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderRequest'
+            example:
+              clientId: 12345
+              shippingAddressName: Casa
+              paymentMethod: TARJETA
+              products:
+                - serialNumber: ABC123
+                  qty: 2
+      responses:
+        '200':
+          description: Orden creada exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+    get:
+      summary: Obtener todas las órdenes
+      description: Devuelve una lista de todas las órdenes registradas.
+      responses:
+        '200':
+          description: Lista de órdenes.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Order'
+  /orders/{id}:
+    get:
+      summary: Obtener orden por ID
+      description: Devuelve los detalles de una orden específica por su ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la orden.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Detalles de la orden.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+    patch:
+      summary: Agregar un producto a la orden
+      description: Agrega un producto a una orden específica.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la orden.
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ItemOrderRequest'
+            example:
+              serialNumber: ABC123
+              qty: 2
+      responses:
+        '200':
+          description: Producto agregado a la orden exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+  /orders/{id}/shipAddress/{addressName}:
+    patch:
+      summary: Actualizar dirección de envío de la orden
+      description: Actualiza la dirección de envío de una orden específica.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la orden.
+          schema:
+            type: string
+        - name: addressName
+          in: path
+          required: true
+          description: Nombre de la nueva dirección de envío.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Dirección de envío actualizada exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+  /orders/{id}/cancel:
+    patch:
+      summary: Cancelar orden
+      description: Marca una orden específica como cancelada.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la orden.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Orden cancelada exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+  /orders/{id}/onRoute:
+    patch:
+      summary: Actualizar orden a en ruta
+      description: Marca una orden como en ruta para entrega.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la orden.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Estado de la orden actualizado a "en ruta".
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+  /orders/{id}/delivered:
+    patch:
+      summary: Actualizar orden a entregada
+      description: Marca una orden como entregada.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID de la orden.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Estado de la orden actualizado a "entregada".
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+  /orders/client/{clientId}:
+    get:
+      summary: Obtener todas las órdenes de un cliente
+      description: Devuelve una lista de todas las órdenes asociadas a un cliente específico.
+      parameters:
+        - name: clientId
+          in: path
+          required: true
+          description: ID del cliente.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Lista de órdenes del cliente.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Order'
+  /products:
+    post:
+      summary: Crear un producto
+      description: Crea un nuevo producto en el sistema.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+            example:
+              serialNumber: PRD12345
+              description: Televisor OLED 55"
+              urlImage: https://example.com/image.jpg
+              price: 12999.99
+              active: true
+      responses:
+        '200':
+          description: Producto creado exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+    get:
+      summary: Obtener todos los productos
+      description: Devuelve una lista de todos los productos registrados.
+      responses:
+        '200':
+          description: Lista de productos.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+  /products/{id}:
+    get:
+      summary: Obtener producto por ID
+      description: Devuelve los detalles de un producto específico por su ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del producto.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Detalles del producto.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+    delete:
+      summary: Eliminar producto
+      description: Elimina un producto específico por su ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del producto.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Producto eliminado exitosamente.
+          content:
+            application/json:
+              schema:
+                type: boolean
+  /products/serial/{serialNumber}:
+    get:
+      summary: Obtener producto por número de serie
+      description: Devuelve los detalles de un producto específico por su número de serie.
+      parameters:
+        - name: serialNumber
+          in: path
+          required: true
+          description: Número de serie del producto.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Detalles del producto.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+  /products/{id}/deactivate:
+    patch:
+      summary: Desactivar producto
+      description: Marca un producto como inactivo.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del producto.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Producto desactivado exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+components:
+  schemas:
+    Client:
+      type: object
+      properties:
+        id:
+          type: string
+        firstName:
+          type: string
+          description: Nombre del cliente.
+        middleName:
+          type: string
+          description: Segundo nombre del cliente.
+        paternalLastName:
+          type: string
+          description: Apellido paterno del cliente.
+        maternalLastName:
+          type: string
+          description: Apellido materno del cliente.
+        email:
+          type: string
+          description: Correo electrónico del cliente.
+        addresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/Address'
+    Address:
+      type: object
+      properties:
+        addressName:
+          type: string
+          description: Nombre de la dirección.
+        street:
+          type: string
+          description: Calle.
+        exteriorNumber:
+          type: string
+          description: Número exterior.
+        interiorNumber:
+          type: string
+          description: Número interior.
+        neighborhood:
+          type: string
+          description: Colonia.
+        city:
+          type: string
+          description: Ciudad.
+        state:
+          type: string
+          description: Estado.
+        postalCode:
+          type: string
+          description: Código postal.
+        country:
+          type: string
+          description: País.
+    Order:
+      type: object
+      properties:
+        id:
+          type: string
+        clientId:
+          type: string
+          description: ID del cliente asociado a la orden.
+        shippingAddress:
+          $ref: '#/components/schemas/Address'
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemOrder'
+        orderTotal:
+          type: number
+          description: Total de la orden.
+        paymentMethod:
+          type: string
+          description: Método de pago.
+    OrderRequest:
+      type: object
+      properties:
+        clientId:
+          type: string
+          description: ID del cliente asociado a la orden.
+        shippingAddressName:
+          type: string
+          description: Nombre de la dirección de envío.
+        paymentMethod:
+          type: string
+          description: Método de pago.
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemOrderRequest'
+    ItemOrder:
+      type: object
+      properties:
+        serialNumber:
+          type: string
+          description: Número de serie del producto.
+        price:
+          type: number
+          description: Precio del producto.
+        qty:
+          type: integer
+          description: Cantidad del producto.
+    ItemOrderRequest:
+      type: object
+      properties:
+        serialNumber:
+          type: string
+          description: Número de serie del producto.
+        qty:
+          type: integer
+          description: Cantidad del producto solicitada.
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID del producto.
+        serialNumber:
+          type: string
+          description: Número de serie del producto.
+        description:
+          type: string
+          description: Descripción del producto.
+        urlImage:
+          type: string
+          description: URL de la imagen del producto.
+        price:
+          type: number
+          description: Precio del producto.
+        active:
+          type: boolean
+          description: Estado del producto (activo o inactivo).

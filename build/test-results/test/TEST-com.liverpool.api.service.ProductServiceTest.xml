@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.liverpool.api.service.ProductServiceTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2025-01-13T20:37:14" hostname="PabloMacDev.local" time="0.012">
+  <properties/>
+  <testcase name="deactivateProduct_AlreadyInactive()" classname="com.liverpool.api.service.ProductServiceTest" time="0.001"/>
+  <testcase name="getAllProducts()" classname="com.liverpool.api.service.ProductServiceTest" time="0.001"/>
+  <testcase name="updateProduct_Success()" classname="com.liverpool.api.service.ProductServiceTest" time="0.001"/>
+  <testcase name="findById_NotFound()" classname="com.liverpool.api.service.ProductServiceTest" time="0.001"/>
+  <testcase name="findBySerialNumber_NotFound()" classname="com.liverpool.api.service.ProductServiceTest" time="0.001"/>
+  <testcase name="deactivateProduct_Success()" classname="com.liverpool.api.service.ProductServiceTest" time="0.001"/>
+  <testcase name="deleteProduct_NotFound()" classname="com.liverpool.api.service.ProductServiceTest" time="0.001"/>
+  <testcase name="createProduct_DuplicateSerialNumber()" classname="com.liverpool.api.service.ProductServiceTest" time="0.001"/>
+  <testcase name="findBySerialNumber_Success()" classname="com.liverpool.api.service.ProductServiceTest" time="0.001"/>
+  <testcase name="updateProduct_IdNull()" classname="com.liverpool.api.service.ProductServiceTest" time="0.0"/>
+  <testcase name="findById_Success()" classname="com.liverpool.api.service.ProductServiceTest" time="0.0"/>
+  <testcase name="deleteProduct_Success()" classname="com.liverpool.api.service.ProductServiceTest" time="0.001"/>
+  <testcase name="createProduct_Success()" classname="com.liverpool.api.service.ProductServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,472 @@
+
+====================
+====================PRODUCTS
+====================
+{
+    "serialNumber":"10000",
+    "description":"Gorra con visera curva ADIDAS Originals para adulto",
+    "urlImage":"https://ss252.liverpool.com.mx/lg/1155831134.jpg",
+    "price": 275.0,
+    "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10001",
+     "description":"Silla gamer Max Nenotech  de cuero de PVC",
+     "urlImage":"https://ss637.liverpool.com.mx/xl/1136761915.jpg",
+     "price": 1649.0,
+     "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10002",
+     "description":"Chamarra Greenlander cuello a contraste para hombre",
+     "urlImage":"https://ss271.liverpool.com.mx/xl/1148914563.jpg",
+     "price": 1799.0,
+     "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10003",
+     "description":"Perfume Dior Sauvage Parfum para hombre 100 ML",
+     "urlImage":"https://ss701.liverpool.com.mx/xl/1109736461.jpg",
+     "price": 4020.0,
+     "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10004",
+     "description":"Reloj Stuhrling Legacy para hombre 165B2.331554",
+     "urlImage":"https://ss375.liverpool.com.mx/xl/1081560206.jpg",
+     "price": 2899.0,
+     "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10005",
+     "description":"Automóvil montable Prinsel",
+     "urlImage":"https://ss424.liverpool.com.mx/xl/1163763679.jpg",
+     "price": 1199.0,
+     "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10006",
+     "description":"Traje para hombre Vittorio Forti Azul",
+     "urlImage":"https://ss241.liverpool.com.mx/xl/1154269378.jpg",
+     "price": 7375.0,
+     "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10007",
+     "description":"Audífonos True Wireless Samsung Galaxy Buds 2 Pro inalámbricos con cancelación de ruido",
+     "urlImage":"https://ss632.liverpool.com.mx/xl/1125560381.jpg",
+     "price": 2790.0,
+     "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10008",
+     "description":"Bolsa tote Basha Ivana",
+     "urlImage":"https://ss514.liverpool.com.mx/xl/1123305848.jpg",
+     "price": 999.0,
+     "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10009",
+     "description":"Bicicleta urbana Veloci rodada 29 bicicleta adulto unisex",
+     "urlImage":"https://ss201.liverpool.com.mx/xl/1167998972.jpg",
+     "price": 4608.0,
+     "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10010",
+     "description":"Laptop gamer Asus Tuf Gaming A15 15.6 pulgadas Full HD Intel Core i7 NVIDIA GeForce RTX 4050 16 GB RAM 512 GB SSD",
+     "urlImage":"https://ss628.liverpool.com.mx/xl/1161133279.jpg",
+     "price": 23399.0,
+     "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10011",
+     "description":"Calceta antiderrapante para entrenamiento ADIDAS unisex 3 pares Blanco",
+     "urlImage":"https://ss203.liverpool.com.mx/xl/1154125878.jpg",
+     "price": 183.0,
+     "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10012",
+     "description":"Calceta antiderrapante para entrenamiento ADIDAS unisex 3 pares Negro",
+     "urlImage":"https://ss203.liverpool.com.mx/xl/1154125550.jpg",
+     "price": 183.0,
+     "active":true
+ }
+ ====================
+ {
+     "serialNumber":"10013",
+     "description":"Camisa casual Tommy Hilfiger de algodón manga larga para hombre",
+     "urlImage":"https://ss261.liverpool.com.mx/xl/1148924085.jpg",
+     "price": 949.50,
+     "active":true
+ }
+ ====================
+ ====================CLIENTS
+ ====================
+ {
+     "firstName":"Pablo",
+     "middleName": "",
+     "paternalLastName": "Benavides",
+     "maternalLastName": "Molina",
+     "email":"pblo.benavides@gmail.com",
+     "addresses":[
+         {
+             "addressName": "Casa Tancol",
+             "street": "Calle Miguel Hidalgo",
+             "exteriorNumber": "120",
+             "interiorNumber": "",
+             "neighborhood": "Colonia Insurgentes",
+             "city": "Tampico",
+             "state": "Tamaulipas",
+             "postalCode": "89365",
+             "country": "México"
+         }
+     ]
+ }
+ ====================
+ {
+     "firstName": "Ricardo",
+     "middleName": "Lino",
+     "paternalLastName": "García",
+     "maternalLastName": "López",
+     "email": "rlgarcial@liverpool.com.mx",
+     "addresses": [
+         {
+             "addressName": "Casa Principal",
+             "street": "Calle Hidalgo",
+             "exteriorNumber": "123",
+             "interiorNumber": "4B",
+             "neighborhood": "Zona Centro",
+             "city": "Ciudad Victoria",
+             "state": "Tamaulipas",
+             "postalCode": "87000",
+             "country": "México"
+         },
+         {
+             "addressName": "Oficina",
+             "street": "Calle 16",
+             "exteriorNumber": "456",
+             "interiorNumber": "2A",
+             "neighborhood": "Guerrero",
+             "city": "Reynosa",
+             "state": "Tamaulipas",
+             "postalCode": "88500",
+             "country": "México"
+         }
+     ]
+ }
+ ====================
+ {
+     "firstName": "Zeus",
+     "middleName": "",
+     "paternalLastName": "Arenas",
+     "maternalLastName": "Huerta",
+     "email": "zarenash@liverpool.com.mx",
+     "addresses": [
+         {
+             "addressName": "Casa",
+             "street": "Boulevard López Mateos",
+             "exteriorNumber": "789",
+             "interiorNumber": "1C",
+             "neighborhood": "Las Américas",
+             "city": "Matamoros",
+             "state": "Tamaulipas",
+             "postalCode": "87300",
+             "country": "México"
+         }
+     ]
+ }
+ ====================
+ {
+     "firstName": "Joaquin",
+     "middleName": "",
+     "paternalLastName": "Flores",
+     "maternalLastName": "Colin",
+     "email": "jfloresc08@liverpool.com.mx",
+     "addresses": [
+         {
+             "addressName": "Departamento",
+             "street": "Calle Juárez",
+             "exteriorNumber": "321",
+             "interiorNumber": "5D",
+             "neighborhood": "Doctores",
+             "city": "Nuevo Laredo",
+             "state": "Tamaulipas",
+             "postalCode": "88000",
+             "country": "México"
+         },
+         {
+             "addressName": "Casa Playa",
+             "street": "Avenida Tamaulipas",
+             "exteriorNumber": "654",
+             "interiorNumber": null,
+             "neighborhood": "Campestre",
+             "city": "Ciudad Madero",
+             "state": "Tamaulipas",
+             "postalCode": "89400",
+             "country": "México"
+         }
+     ]
+ }
+ ====================
+ {
+     "firstName": "Jonatan",
+     "middleName": "",
+     "paternalLastName": "Bataz",
+     "maternalLastName": "Astudillo",
+     "email": "jbataza@liverpool.com.mx",
+     "addresses": [
+         {
+             "addressName": "Casa",
+             "street": "Calle Morelos",
+             "exteriorNumber": "789",
+             "interiorNumber": null,
+             "neighborhood": "Independencia",
+             "city": "Altamira",
+             "state": "Tamaulipas",
+             "postalCode": "89600",
+             "country": "México"
+         }
+     ]
+ }
+ ====================
+ {
+     "firstName": "Ezequiel",
+     "middleName": "",
+     "paternalLastName": "Perez",
+     "maternalLastName": "De Lucio",
+     "email": "eperezd01@liverpool.com.mx",
+     "addresses": [
+         {
+             "addressName": "Casa Principal",
+             "street": "Calle Zaragoza",
+             "exteriorNumber": "456",
+             "interiorNumber": "1A",
+             "neighborhood": "Centro",
+             "city": "San Fernando",
+             "state": "Tamaulipas",
+             "postalCode": "87600",
+             "country": "México"
+         }
+     ]
+ }
+ ====================
+ {
+     "firstName": "Julio",
+     "middleName": "Cesar",
+     "paternalLastName": "Martinez",
+     "maternalLastName": "Castillo",
+     "email": "jcmartinec03@liverpool.com.mx",
+     "addresses": [
+         {
+             "addressName": "Departamento",
+             "street": "Calle Victoria",
+             "exteriorNumber": "987",
+             "interiorNumber": null,
+             "neighborhood": "Industrial",
+             "city": "Valle Hermoso",
+             "state": "Tamaulipas",
+             "postalCode": "87500",
+             "country": "México"
+         }
+     ]
+ }
+ ====================
+ {
+     "firstName": "Ricardo",
+     "middleName": "",
+     "paternalLastName": "Ruan",
+     "maternalLastName": "Arevalo",
+     "email": "rruana@liverpool.com.mx",
+     "addresses": [
+         {
+             "addressName": "Casa",
+             "street": "Calle Miguel Alemán",
+             "exteriorNumber": "654",
+             "interiorNumber": "3C",
+             "neighborhood": "Centro",
+             "city": "Tampico",
+             "state": "Tamaulipas",
+             "postalCode": "89200",
+             "country": "México"
+         },
+         {
+             "addressName": "Oficina",
+             "street": "Avenida Hidalgo",
+             "exteriorNumber": "123",
+             "interiorNumber": "4B",
+             "neighborhood": "Del Prado",
+             "city": "Tampico",
+             "state": "Tamaulipas",
+             "postalCode": "89100",
+             "country": "México"
+         }
+     ]
+ }
+ ====================
+ ====================ORDERS
+ ====================
+ {
+    "clientId": "5835b0a1-aa7e-43e5-8f21-5381ee00082f",
+    "paymentMethod" : "CREDIT_CARD",
+    "shippingAddressName": "Casa Tancol",
+    "products": [
+      {
+        "serialNumber": "10002",
+        "qty": 1
+      },
+      {
+        "serialNumber": "10005",
+        "qty": 2
+      },
+      {
+        "serialNumber": "10012",
+        "qty": 1
+      }
+    ]
+}
+====================
+{
+    "clientId": "5835b0a1-aa7e-43e5-8f21-5381ee00082f",
+    "paymentMethod" : "DEBIT_CARD",
+    "shippingAddressName": "CASA tancol",
+    "products": [
+      {
+        "serialNumber": "10012",
+        "qty": 8
+      }
+    ]
+}
+====================
+{
+    "clientId": "536ba6de-62c1-4488-acf6-b8b72e7dc0b5",
+    "paymentMethod" : "CREDIT_CARD",
+    "shippingAddressName": "CASA PRINCIPAL",
+    "products": [
+      {
+        "serialNumber": "10002",
+        "qty": 1
+      },
+      {
+        "serialNumber": "10003",
+        "qty": 2
+      },
+      {
+        "serialNumber": "10004",
+        "qty": 1
+      }
+    ]
+}
+====================
+{
+    "clientId": "03b7086b-728b-4811-a07e-bd8fa4c77452",
+    "paymentMethod" : "CREDIT_CARD",
+    "shippingAddressName": "DEPARTAMENTO",
+    "products": [
+      {
+        "serialNumber": "10004",
+        "qty": 1
+      },
+      {
+        "serialNumber": "10005",
+        "qty": 2
+      }
+    ]
+}
+====================
+{
+    "clientId": "9167f9af-200a-4e47-b83e-1f5f3e6246fe",
+    "paymentMethod" : "CREDIT_CARD",
+    "shippingAddressName": "CASA",
+    "products": [
+      {
+        "serialNumber": "10006",
+        "qty": 1
+      }
+    ]
+}
+====================
+{
+    "clientId": "b6ff58e8-ce6e-416b-a783-ed3bc1efc01a",
+    "paymentMethod" : "CREDIT_CARD",
+    "shippingAddressName": "CASA PRINCIPAL",
+    "products": [
+      {
+        "serialNumber": "10007",
+        "qty": 1
+      },
+      {
+        "serialNumber": "10008",
+        "qty": 2
+      },
+      {
+        "serialNumber": "10009",
+        "qty": 1
+      }
+    ]
+}
+====================
+{
+    "clientId": "4189ab89-b84a-415d-ae52-18f3b078fe8e",
+    "paymentMethod" : "CREDIT_CARD",
+    "shippingAddressName": "DEPARTAMENTO",
+    "products": [
+      {
+        "serialNumber": "10009",
+        "qty": 1
+      }
+    ]
+}
+====================
+{
+    "clientId": "5c78eaac-bea0-4ec8-b3cb-c14d0dbbc88b",
+    "paymentMethod" : "CREDIT_CARD",
+    "shippingAddressName": "OFICINA",
+    "products": [
+      {
+        "serialNumber": "10010",
+        "qty": 1
+      },
+      {
+        "serialNumber": "10011",
+        "qty": 2
+      }
+    ]
+}
+====================
+{
+    "clientId": "9b7677d4-6a50-47d4-9254-78aa78ef8f53",
+    "paymentMethod" : "CREDIT_CARD",
+    "shippingAddressName": "CASA",
+    "products": [
+      {
+        "serialNumber": "10001",
+        "qty": 1
+      },
+      {
+        "serialNumber": "10012",
+        "qty": 2
+      },
+      {
+        "serialNumber": "10013",
+        "qty": 1
+      },
+      {
+        "serialNumber": "10014",
+        "qty": 1
+      }
+    ]
+}

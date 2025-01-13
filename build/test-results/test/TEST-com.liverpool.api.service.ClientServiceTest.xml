@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.liverpool.api.service.ClientServiceTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2025-01-13T20:37:14" hostname="PabloMacDev.local" time="0.311">
+  <properties/>
+  <testcase name="updateAddress_Success()" classname="com.liverpool.api.service.ClientServiceTest" time="0.279"/>
+  <testcase name="updateClient_IdNull()" classname="com.liverpool.api.service.ClientServiceTest" time="0.011"/>
+  <testcase name="deleteClient_NotFound()" classname="com.liverpool.api.service.ClientServiceTest" time="0.002"/>
+  <testcase name="findById_NotFound()" classname="com.liverpool.api.service.ClientServiceTest" time="0.001"/>
+  <testcase name="findByEmail_NotFound()" classname="com.liverpool.api.service.ClientServiceTest" time="0.001"/>
+  <testcase name="updateClient_Success()" classname="com.liverpool.api.service.ClientServiceTest" time="0.002"/>
+  <testcase name="deleteAddress_NotFound()" classname="com.liverpool.api.service.ClientServiceTest" time="0.001"/>
+  <testcase name="updateAddress_NotFound()" classname="com.liverpool.api.service.ClientServiceTest" time="0.001"/>
+  <testcase name="createClient_DuplicateEmail()" classname="com.liverpool.api.service.ClientServiceTest" time="0.0"/>
+  <testcase name="addAddress_DuplicateAddress()" classname="com.liverpool.api.service.ClientServiceTest" time="0.001"/>
+  <testcase name="createClient_Success()" classname="com.liverpool.api.service.ClientServiceTest" time="0.001"/>
+  <testcase name="deleteClient_Success()" classname="com.liverpool.api.service.ClientServiceTest" time="0.001"/>
+  <testcase name="addAddress_Success()" classname="com.liverpool.api.service.ClientServiceTest" time="0.001"/>
+  <testcase name="findById_Success()" classname="com.liverpool.api.service.ClientServiceTest" time="0.001"/>
+  <testcase name="deleteAddress_Success()" classname="com.liverpool.api.service.ClientServiceTest" time="0.001"/>
+  <testcase name="getAllClients()" classname="com.liverpool.api.service.ClientServiceTest" time="0.0"/>
+  <testcase name="findByEmail_Success()" classname="com.liverpool.api.service.ClientServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

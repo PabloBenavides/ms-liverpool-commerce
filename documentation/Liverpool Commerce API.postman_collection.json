@@ -1,0 +1,565 @@
+{
+	"info": {
+		"_postman_id": "da93f6fa-bb29-4bb6-b7d8-8adcb4c5bd3f",
+		"name": "Liverpool Commerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2564613",
+		"_collection_link": "https://comgrucas.postman.co/workspace/GrucasAPI~7ba26d86-8e8b-4142-8b4f-403801b3dbc0/collection/2564613-da93f6fa-bb29-4bb6-b7d8-8adcb4c5bd3f?action=share&source=collection_link&creator=2564613"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "     {\n         \"serialNumber\":\"10013\",\n         \"description\":\"Camisa casual Tommy Hilfiger de algodón manga larga para hombre\",\n         \"urlImage\":\"https://ss261.liverpool.com.mx/xl/1148924085.jpg\",\n         \"price\": 949.50,\n         \"active\":true\n      }"
+						},
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/products",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/products/29bfce24-7cb5-42a9-b17f-7847aeac0309",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"products",
+								"29bfce24-7cb5-42a9-b17f-7847aeac0309"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By Serial Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/products/serial/10013",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"products",
+								"serial",
+								"10013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/products",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"id\":\"2d9abd26-632f-4151-bf5c-5303e3cf0ab7\",\n   \"serialNumber\":\"10001\",\n        \"description\": \"SILLA GAMER MAX NENOTECH DE CUERO DE PVC\",\n        \"urlImage\": \"https://ss637.liverpool.com.mx/xl/1136761915.jpg\",\n        \"price\": 1649.0,\n        \"active\": true\n}"
+						},
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/products",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/products/EB16C338-3B3B-4B44-BFE1-6946B3272B84",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"products",
+								"EB16C338-3B3B-4B44-BFE1-6946B3272B84"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate Product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/products/05306625-de26-4954-bb53-1ea9baddccc0/deactivate",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"products",
+								"05306625-de26-4954-bb53-1ea9baddccc0",
+								"deactivate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "Create Client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n     \"firstName\":\"Pablo\",\n     \"middleName\": \"\",\n     \"paternalLastName\": \"Benavides\",\n     \"maternalLastName\": \"Molina\",\n     \"email\":\"pblo.benavides@gmail.com\",\n     \"addresses\":[\n         {\n             \"addressName\": \"Casa Tancol\",\n             \"street\": \"Calle Miguel Hidalgo\",\n             \"exteriorNumber\": \"120\",\n             \"interiorNumber\": \"\",\n             \"neighborhood\": \"Colonia Insurgentes\",\n             \"city\": \"Tampico\",\n             \"state\": \"Tamaulipas\",\n             \"postalCode\": \"89365\",\n             \"country\": \"México\"\n         }\n     ]\n }"
+						},
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/clients",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/clients/5835b0a1-aa7e-43e5-8f21-5381ee00082f",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"clients",
+								"5835b0a1-aa7e-43e5-8f21-5381ee00082f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client By Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/clients/email/pblo.benavides@gmail.com",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"clients",
+								"email",
+								"pblo.benavides@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/clients",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Client",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n     \"id\":\"5835b0a1-aa7e-43e5-8f21-5381ee00082f\",\n     \"firstName\":\"Pablo\",\n     \"middleName\": \"\",\n     \"paternalLastName\": \"Benavides\",\n     \"maternalLastName\": \"Molina\",\n     \"email\":\"pblo.benavides@gmail.com\"\n }"
+						},
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/clients",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Address to Client",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "         {\n             \"addressName\": \"Casa Principal\",\n             \"street\": \"Calle Hidalgo\",\n             \"exteriorNumber\": \"123\",\n             \"interiorNumber\": \"4B\",\n             \"neighborhood\": \"Zona Centro\",\n             \"city\": \"Ciudad Victoria\",\n             \"state\": \"Tamaulipas\",\n             \"postalCode\": \"87000\",\n             \"country\": \"México\"\n         }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/clients/5835b0a1-aa7e-43e5-8f21-5381ee00082f/address",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"clients",
+								"5835b0a1-aa7e-43e5-8f21-5381ee00082f",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Client Address",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "         {\n             \"addressName\": \"Casa Principal\",\n             \"street\": \"Calle MORELOS\",\n             \"exteriorNumber\": \"187\",\n             \"interiorNumber\": \"4B\",\n             \"neighborhood\": \"Zona Centro\",\n             \"city\": \"Ciudad Victoria\",\n             \"state\": \"Tamaulipas\",\n             \"postalCode\": \"87000\",\n             \"country\": \"México\"\n         }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/clients/5835b0a1-aa7e-43e5-8f21-5381ee00082f/address/casa%20principal",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"clients",
+								"5835b0a1-aa7e-43e5-8f21-5381ee00082f",
+								"address",
+								"casa%20principal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Client Address",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/clients/5835b0a1-aa7e-43e5-8f21-5381ee00082f/address/casa%20principal",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"clients",
+								"5835b0a1-aa7e-43e5-8f21-5381ee00082f",
+								"address",
+								"casa%20principal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/clients/5835b0a1-aa7e-43e5-8f21-5381ee00082f",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"clients",
+								"5835b0a1-aa7e-43e5-8f21-5381ee00082f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"clientId\": \"5835b0a1-aa7e-43e5-8f21-5381ee00082f\",\n    \"paymentMethod\" : \"CREDIT_CARD\",\n    \"shippingAddressName\": \"CASA tancol\",\n    \"products\": [\n      {\n        \"serialNumber\": \"10012\",\n        \"qty\": 8\n      }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/orders",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/orders/f163211b-0348-4ef4-9065-1b9dcc02fb41",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"orders",
+								"f163211b-0348-4ef4-9065-1b9dcc02fb41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/orders",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Orders By Client ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/orders/client/5835b0a1-aa7e-43e5-8f21-5381ee00082f",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"orders",
+								"client",
+								"5835b0a1-aa7e-43e5-8f21-5381ee00082f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Item to Order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "      {\n        \"serialNumber\": \"10009\",\n        \"qty\": 2\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/orders/15115230-fc99-499f-a7b5-c017ad4128c6/item",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"orders",
+								"15115230-fc99-499f-a7b5-c017ad4128c6",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Shipping Address",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/orders/15115230-fc99-499f-a7b5-c017ad4128c6/shipAddress/casa%20tancol",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"orders",
+								"15115230-fc99-499f-a7b5-c017ad4128c6",
+								"shipAddress",
+								"casa%20tancol"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/orders/a561451c-0ae9-4562-bcba-58a85d1cc790/cancel",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"orders",
+								"a561451c-0ae9-4562-bcba-58a85d1cc790",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order to On Route",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/orders/:id/onRoute",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"orders",
+								":id",
+								"onRoute"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order to Delivered",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url-ms-liver-commerce}}/orders/:id/delivered",
+							"host": [
+								"{{url-ms-liver-commerce}}"
+							],
+							"path": [
+								"orders",
+								":id",
+								"delivered"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
